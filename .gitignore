@@ -1,0 +1,11 @@
+.dev.vars
+.wrangler/
+
+.dart_tool/
+build/
+.idea/
+.vscode/
+*.iml
+
+.env
+.env.*

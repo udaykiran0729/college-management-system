@@ -1,0 +1,37 @@
+{
+  "name": "student-details-worker",
+  "main": "index.ts",
+  "compatibility_date": "2026-08-24",
+
+  "vars": {
+    "MY_APP_NAME": "Student Management API"
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "student-db",
+      "database_id": "dcd0a891-7f41-4037-8072-81452be41fb0",
+      "migrations_dir": "drizzle",
+      "migrations_pattern": "drizzle/*.sql"
+    }
+  ],
+
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "STUDENT_DO",
+        "class_name": "StudentDO"
+      }
+    ]
+  },
+
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "StudentDO"
+      ]
+    }
+  ]
+}
